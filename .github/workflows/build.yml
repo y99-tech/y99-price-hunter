@@ -36,15 +36,25 @@ jobs:
         with:
           name: Y99-Price-Hunter-${{ runner.os }}
           path: |
-            release/*.exe
-            release/*.dmg
-            release/*.zip
+            release/Y99-Price-Hunter-*.exe
+            release/Y99-Price-Hunter-*.dmg
+            release/Y99-Price-Hunter-*.zip
           if-no-files-found: error
       - name: Attach to GitHub release (tags only)
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/*.exe
-            release/*.dmg
-            release/*.zip
+            release/Y99-Price-Hunter-*.exe
+            release/Y99-Price-Hunter-*.dmg
+            release/Y99-Price-Hunter-*.zip
+          body: |
+            ## Download
+
+            | Your computer | Download | |
+            | --- | --- | --- |
+            | **Windows** | `Y99-Price-Hunter-Windows-Setup.exe` | Double-click, it installs and opens. Shortcut on your Desktop. |
+            | **Windows, no install** | `Y99-Price-Hunter-Windows-Portable.exe` | Just double-click. Works from a USB stick too. |
+            | **Mac** (any Mac, Apple chip or Intel) | `Y99-Price-Hunter-Mac.dmg` | Open it, drag the app to Applications, then double-click **Open-Me-First-Mac**. |
+
+            **Windows says "Windows protected your PC"?** Click *More info* → *Run anyway* (only the first time).

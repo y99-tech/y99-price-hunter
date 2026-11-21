@@ -8,19 +8,21 @@ own computer with their own accounts.
 
 ## Download
 
-Go to **Releases** (or the latest **Actions → Build** run) and download:
+Go to **[Releases](../../releases/latest)** and pick one file:
 
-| System | File |
-| --- | --- |
-| Windows | `Y99-Price-Hunter-Setup-x.y.z.exe` (installer) or `Y99-Price-Hunter-Portable-x.y.z.exe` |
-| Mac (Apple silicon, M1–M4) | `Y99-Price-Hunter-x.y.z-mac-arm64.dmg` |
-| Mac (Intel) | `Y99-Price-Hunter-x.y.z-mac-x64.dmg` |
+| Your computer | Download | What to do |
+| --- | --- | --- |
+| **Windows** | `Y99-Price-Hunter-Windows-Setup.exe` | Double-click. It installs in a few seconds, opens, and puts a shortcut on your Desktop. |
+| **Windows, no install** | `Y99-Price-Hunter-Windows-Portable.exe` | Double-click to run. Nothing is installed; works from a USB stick too. |
+| **Mac** (Apple chip M1–M4 or Intel) | `Y99-Price-Hunter-Mac.dmg` | Open it, drag **Y99 Price Hunter** into **Applications**, then double-click **Open-Me-First-Mac** (once). |
 
-The builds are not code-signed yet:
+**First time only:**
 
-- **Windows:** SmartScreen shows "Windows protected your PC" → *More info* → *Run anyway*.
-- **Mac:** first launch, right-click the app → *Open* → *Open*. If macOS says the app is "damaged", run
-  `xattr -cr "/Applications/Y99 Price Hunter.app"` in Terminal once.
+- **Windows** may say *"Windows protected your PC"*. Click **More info → Run anyway**. (The app isn't
+  code-signed yet; it's safe.)
+- **Mac:** if *Open-Me-First-Mac* itself is blocked, right-click it → **Open** → **Open**. Or open
+  **System Settings → Privacy & Security** and click **Open Anyway** next to Y99 Price Hunter. After that
+  it opens normally from Launchpad.
 
 ## How it works
 
