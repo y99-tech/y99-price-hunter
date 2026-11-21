@@ -14,6 +14,7 @@ Go to **[Releases](../../releases/latest)** and pick one file:
 | --- | --- | --- |
 | **Windows** | `Y99-Price-Hunter-Windows-Setup.exe` | Double-click. It installs in a few seconds, opens, and puts a shortcut on your Desktop. |
 | **Windows, no install** | `Y99-Price-Hunter-Windows-Portable.exe` | Double-click to run. Nothing is installed; works from a USB stick too. |
+| **Windows, if your antivirus blocks the .exe** | `Y99-Price-Hunter-Windows-NoInstall.zip` | Right-click → *Extract All*, open the folder, double-click **Y99 Price Hunter.exe**. |
 | **Mac** (Apple chip M1–M4 or Intel) | `Y99-Price-Hunter-Mac.dmg` | Open it, drag **Y99 Price Hunter** into **Applications**, then double-click **Open-Me-First-Mac** (once). |
 
 **First time only:**
@@ -23,6 +24,16 @@ Go to **[Releases](../../releases/latest)** and pick one file:
 - **Mac:** if *Open-Me-First-Mac* itself is blocked, right-click it → **Open** → **Open**. Or open
   **System Settings → Privacy & Security** and click **Open Anyway** next to Y99 Price Hunter. After that
   it opens normally from Launchpad.
+
+### Antivirus says it's a threat?
+
+The app is new and not code-signed yet, so some antivirus apps (Norton, Avast, etc.) block it based on
+"reputation": too few people have downloaded it so far. It contains no malware: the full source code is
+in this repository and every download is built automatically by GitHub Actions from that code.
+
+- Use the **NoInstall.zip** download; it is flagged far less often than the installer.
+- Or, in Norton: open the alert → **Restore & exclude this file**.
+- Every report of a false alarm helps the app build reputation, so it stops being flagged for everyone.
 
 ## How it works
 
