@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "test": "node --test \"test/**/*.test.js\"",
+    "test": "node --test test/match.test.js test/hunter.test.js",
     "dist:win": "electron-builder --win --publish never",
     "dist:mac": "electron-builder --mac --publish never",
     "dist": "electron-builder --publish never"
