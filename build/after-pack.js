@@ -5,6 +5,9 @@ const path = require('path');
 
 exports.default = async function afterPack(ctx) {
   if (ctx.electronPlatformName !== 'darwin' || process.platform !== 'darwin') return;
+  // Universal builds pack an x64 and an arm64 copy first ("...-temp") and then merge them.
+  // Sign only the merged app; signing the halves makes the merge fail.
+  if (/-temp$/.test(ctx.appOutDir)) return;
   const app = path.join(ctx.appOutDir, `${ctx.packager.appInfo.productFilename}.app`);
   execFileSync('codesign', ['--force', '--deep', '--sign', '-', app], { stdio: 'inherit' });
 };
