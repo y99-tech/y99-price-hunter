@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self'; script-src 'self'" />
+  <title>Y99 Price Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">Y9<span>9</span> <b>Price Hunter</b></div>
+    <nav id="tabs">
+      <button data-tab="watch" class="on">Watchlist</button>
+      <button data-tab="alerts">Alerts <i id="alertCount"></i></button>
+      <button data-tab="sources">Sources</button>
+      <button data-tab="accounts">Accounts</button>
+      <button data-tab="settings">Settings</button>
+    </nav>
+    <div class="run">
+      <span id="status" class="muted"></span>
+      <button id="huntBtn" class="primary">Hunt now</button>
+    </div>
+  </header>
+  <main id="view"></main>
+
+  <dialog id="dlg"><form method="dialog" id="dlgForm"></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
