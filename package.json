@@ -1,7 +1,7 @@
 {
   "name": "y99-price-hunter",
   "productName": "Y99 Price Hunter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Watch prices for the gear you want across online stores, Facebook Marketplace and OLX \u2014 using your own logged-in accounts.",
   "main": "main.js",
   "author": "Y99 <y99.agency@gmail.com>",

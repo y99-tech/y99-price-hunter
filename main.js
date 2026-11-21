@@ -15,7 +15,7 @@ let store;
 let hunter;
 
 const DEFAULTS = {
-  settings: { intervalHours: 3, autoHunt: true, fbCity: 'cairo', keepInTray: true, currency: 'EGP' },
+  settings: { theme: 'light', intervalHours: 3, autoHunt: true, fbCity: 'cairo', keepInTray: true, currency: 'EGP' },
   sources: BUILTIN_SOURCES,
   items: [
     sampleItem('Sony NP-FZ100 battery', '🔋', 'NP-FZ100\nFZ100', 'fz100', 'dummy, adapter, coupler, charger, charging, station, kit, plate, grip, cable, decoder', 2363),
@@ -131,7 +131,7 @@ function showWindow() {
 function createWindow() {
   win = new BrowserWindow({
     width: 1280, height: 860, minWidth: 980, minHeight: 640,
-    title: 'Y99 Price Hunter', backgroundColor: '#0a0a0a',
+    title: 'Y99 Price Hunter', backgroundColor: '#ffffff',
     icon: path.join(__dirname, 'build', 'icon.png'),
     titleBarStyle: isMac ? 'hiddenInset' : 'default',
     autoHideMenuBar: true,
@@ -219,7 +219,7 @@ function registerIpc() {
     d().settings = {
       ...cur,
       intervalHours: Math.min(48, Math.max(1, Number(s.intervalHours) || cur.intervalHours)),
-      autoHunt: !!s.autoHunt, keepInTray: !!s.keepInTray,
+      autoHunt: !!s.autoHunt, keepInTray: !!s.keepInTray, theme: s.theme === 'dark' ? 'dark' : 'light',
       fbCity: String(s.fbCity || cur.fbCity).trim().toLowerCase().replace(/[^a-z0-9-]/g, '') || 'cairo',
     };
     store.save(); emit(); return true;

@@ -24,6 +24,7 @@ const KIND_LABEL = { woo: 'WooCommerce', shopify: 'Shopify', web: 'Web page', fa
 function render() {
   if (!S) return;
   document.body.classList.toggle('mac', S.platform === 'darwin');
+  document.documentElement.dataset.theme = S.settings.theme === 'dark' ? 'dark' : 'light';
   document.querySelectorAll('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === tab));
   const unread = S.alerts.filter((a) => !a.read).length;
   $('#alertCount').textContent = unread || '';
@@ -127,6 +128,7 @@ function settings() {
   const s = S.settings;
   return `<div class="head"><div><h2>Settings</h2></div></div>
     <form id="setForm" class="card" style="max-width:560px">
+      <label>Look<select name="theme"><option value="light" ${s.theme !== 'dark' ? 'selected' : ''}>Light (white)</option><option value="dark" ${s.theme === 'dark' ? 'selected' : ''}>Dark</option></select></label>
       <label class="row"><input type="checkbox" name="autoHunt" ${s.autoHunt ? 'checked' : ''}/> Hunt automatically</label>
       <label>Every (hours)<input type="number" name="intervalHours" min="1" max="48" value="${esc(s.intervalHours)}"/></label>
       <label>Facebook Marketplace city (as in the Marketplace link, e.g. cairo, alexandria, giza)<input name="fbCity" value="${esc(s.fbCity)}"/></label>
