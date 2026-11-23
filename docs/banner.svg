@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <radialGradient id="g" cx="85%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#39FF88" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#39FF88" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="#0B0B0C"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#g)"/>
+  <text x="64" y="128" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="72" font-weight="700" fill="#fff">Y9<tspan fill="#39FF88">9</tspan><tspan font-weight="500" fill="#cfcfd4" font-size="56">  Price Hunter</tspan></text>
+  <text x="64" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" fill="#a1a1aa">Watch gear prices across Egyptian stores, Facebook Marketplace and OLX.</text>
+  <text x="64" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" fill="#a1a1aa">Get a desktop alert the moment it hits your price.</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">
+    <rect x="64" y="252" width="128" height="38" rx="19" fill="#39FF88"/><text x="128" y="277" text-anchor="middle" fill="#0B0B0C">Windows</text>
+    <rect x="204" y="252" width="96" height="38" rx="19" fill="none" stroke="#39FF88"/><text x="252" y="277" text-anchor="middle" fill="#39FF88">macOS</text>
+    <rect x="312" y="252" width="104" height="38" rx="19" fill="none" stroke="#3f3f46"/><text x="364" y="277" text-anchor="middle" fill="#d4d4d8">Free</text>
+  </g>
+  <g transform="translate(930 70)" fill="none" stroke="#39FF88" stroke-width="10" stroke-linecap="round">
+    <circle cx="80" cy="80" r="62"/><path d="M126 126l58 58"/>
+    <path d="M52 92l20-24 18 16 26-32" stroke-width="8"/>
+  </g>
+</svg>

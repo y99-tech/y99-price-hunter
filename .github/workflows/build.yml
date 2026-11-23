@@ -55,6 +55,9 @@ jobs:
             | --- | --- | --- |
             | **Windows** | `Y99-Price-Hunter-Windows-Setup.exe` | Double-click, it installs and opens. Shortcut on your Desktop. |
             | **Windows, no install** | `Y99-Price-Hunter-Windows-Portable.exe` | Just double-click. Works from a USB stick too. |
+            | **Windows, antivirus blocks the .exe** | `Y99-Price-Hunter-Windows-NoInstall.zip` | Right-click → Extract All, then open **Y99 Price Hunter.exe**. |
             | **Mac** (any Mac, Apple chip or Intel) | `Y99-Price-Hunter-Mac.dmg` | Open it, drag the app to Applications, then double-click **Open-Me-First-Mac**. |
 
             **Windows says "Windows protected your PC"?** Click *More info* → *Run anyway* (only the first time).
+
+            Step-by-step guide (English + عربي): https://github.com/y99-tech/y99-price-hunter#readme · Made by Y99 — https://youssry99.com/links
